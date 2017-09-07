@@ -13,7 +13,6 @@ const BaseGenerator = require('../../../adonis-commands/src/Generators/Base')
 const path = require('path')
 
 class TableGenerator extends BaseGenerator {
-
   /**
    * makes path to a given template
    * @param  {String} template
@@ -53,13 +52,13 @@ class TableGenerator extends BaseGenerator {
    *
    * @public
    */
-  * handle (args, options) {
+  async handle (args, options) {
     const name = 'create_cache_table'
     const toPath = this.helpers.migrationsPath(`${new Date().getTime()}_${name}.js`)
     const template = 'table'
     const templateOptions = {}
 
-    yield this._wrapWrite(template, toPath, templateOptions)
+    await this._wrapWrite(template, toPath, templateOptions)
   }
 }
 

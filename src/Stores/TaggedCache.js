@@ -14,7 +14,6 @@ const co = require('co')
 const Repository = require('./Repository')
 
 class TaggedCache extends Repository {
-
   /**
    * Create a new tagged cache instance.
    *

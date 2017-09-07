@@ -13,7 +13,6 @@ const TaggableStore = require('./TaggableStore')
 const Util = require('../Util')
 
 class ObjectStore extends TaggableStore {
-
   constructor () {
     super()
     this._storage = {}

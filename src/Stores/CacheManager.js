@@ -16,7 +16,6 @@ const DatabaseStore = require('./DatabaseStore')
 const Repository = require('./Repository')
 
 class CacheManager {
-
   constructor (app) {
     this._app = app // The application instance
     this._stores = [] // The array of resolved cache stores
@@ -43,7 +42,7 @@ class CacheManager {
    * @return {mixed}
    */
   store (name = null) {
-    name = name ? name : this.getDefaultDriver()
+    name = name || this.getDefaultDriver()
     return this._stores[name] = this._get(name)
   }
 

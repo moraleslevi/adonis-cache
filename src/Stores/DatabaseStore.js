@@ -13,7 +13,6 @@ const co = require('co')
 const Util = require('../Util')
 
 class DatabaseStore {
-
   constructor (connection, tableName, prefix = '') {
     this._connection = connection
     this._tableName = tableName
@@ -220,7 +219,6 @@ class DatabaseStore {
   getPrefix () {
     return this._prefix
   }
-
 }
 
 module.exports = DatabaseStore

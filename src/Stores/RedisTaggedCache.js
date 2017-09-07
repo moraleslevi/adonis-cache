@@ -15,7 +15,6 @@ const _ = require('lodash')
 const co = require('co')
 
 class RedisTaggedCache extends TaggedCache {
-
   /**
    * Store an item in the cache.
    *

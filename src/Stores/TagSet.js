@@ -13,7 +13,6 @@ const crypto = require('crypto')
 const co = require('co')
 
 class TagSet {
-
   /**
    * Create a new TagSet instance.
    *
@@ -48,7 +47,7 @@ class TagSet {
   tagId (name) {
     return co(function * () {
       const id = yield this._store.get(this.tagKey(name))
-      return id ? id : yield this.resetTag(name)
+      return id || (yield this.resetTag(name))
     }.bind(this))
   }
 

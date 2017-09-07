@@ -12,7 +12,6 @@
 const TaggableStore = require('./TaggableStore')
 
 class NullStore extends TaggableStore {
-
   /**
    * Retrieve an item from the cache by key.
    *

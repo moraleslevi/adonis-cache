@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
 */
 
-const ServiceProvider = require('adonis-fold').ServiceProvider
+const { ServiceProvider } = require('@adonisjs/fold')
 const CacheManager = require('../src/Stores/CacheManager')
 
 class CacheProvider extends ServiceProvider {
-  * register () {
+  register () {
     this.app.singleton('Adonis/Addons/Cache', function (app) {
       return new CacheManager(app)
     })

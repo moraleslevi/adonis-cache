@@ -19,7 +19,6 @@ const KeyForgotten = require('../Events/KeyForgotten')
 const KeyWritten = require('../Events/KeyWritten')
 
 class Repository {
-
   /**
    * Create a new cache repository instance.
    *
@@ -398,7 +397,6 @@ class Repository {
 
     return Math.floor((duration * 60) > 0 ? duration : null)
   }
-
 }
 
 module.exports = Repository

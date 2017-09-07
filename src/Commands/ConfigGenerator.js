@@ -12,8 +12,7 @@
 const BaseGenerator = require('../../../adonis-commands/src/Generators/Base')
 const path = require('path')
 
-class TableGenerator extends BaseGenerator {
-
+class ConfigGenerator extends BaseGenerator {
   /**
    * makes path to a given template
    * @param  {String} template
@@ -53,13 +52,13 @@ class TableGenerator extends BaseGenerator {
    *
    * @public
    */
-  * handle (args, options) {
+  async handle (args, options) {
     const toPath = this.helpers.configPath(`cache.js`)
     const template = 'config'
     const templateOptions = {}
 
-    yield this._wrapWrite(template, toPath, templateOptions)
+    await this._wrapWrite(template, toPath, templateOptions)
   }
 }
 
-module.exports = TableGenerator
+module.exports = ConfigGenerator
